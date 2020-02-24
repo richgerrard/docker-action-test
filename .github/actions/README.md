@@ -1,4 +1,4 @@
-# Network Policy Checker fof chart folders: docker action
+# Network Policy Checker for chart folders: docker action
 
 This action prints T/F to the log, denoting whether the checked component requires a network policy file, or not.
 
