@@ -1,0 +1,16 @@
+# action.yml
+name: 'Network Policy Checker'
+description: 'Check that connector components provide a network policy'
+inputs:
+  components-to-scan:  # id of input
+    description: 'Potentially vulnerable components that require a network policy'
+    required: true
+    default: 'data-connections'
+outputs:
+  policy-required: # id of output
+    description: 'T/F result signifying a required policy'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.components-to-scan }}
